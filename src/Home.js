@@ -15,21 +15,21 @@ function Home() {
                     image="https://2y74re2whhs715gxj621k1u4-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/inspired.jpg"
                 />
                 <Product
-                    id="1232123"
+                    id="1232153"
                     title="The Lean Startup"
                     price="2500"
                     rating={5}
                     image="https://cdn.brandfolder.io/F97BMUF5/at/q6xz3f-hd2bc-701jdb/Hello-Awesome-Mockup.jpg"
                 />
                 <Product
-                    id="1232123"
+                    id="1239123"
                     title="The Lean Startup"
                     price="2500"
                     rating={5}
                     image="https://cdn.shopify.com/s/files/1/0051/7692/products/aba-000004-pp-3_660x@2x.progressive.jpg?v=1482333028"
                 />
                 <Product
-                    id="1232123"
+                    id="12452123"
                     title="The Lean Startup"
                     price="2500"
                     rating={5}

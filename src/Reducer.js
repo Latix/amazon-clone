@@ -4,7 +4,7 @@ export const initialState = {
 };
 
 function reducer(state, action) {
-    console.log(state);
+    console.log(action);
     switch (action.type) {
         case 'ADD_TO_BASKET':
             //  Logic for adding item to basket
@@ -14,7 +14,16 @@ function reducer(state, action) {
             };
         case 'REMOVE_FROM_BASKET':
             // Logic for removing item from basket
-            return { state };
+            let newBasket = [...state.basket];
+            const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
+
+            if (index >= 0) {
+                // Item exists in basket, remove it
+                newBasket.splice(index, 1);
+            } else {
+                console.warn('Cannot remove product!');
+            }
+            return { ...state, basket: newBasket };
         default:
             return state;
     }

@@ -15,7 +15,7 @@ function Checkout() {
                 alt="" />
             </div>
             {basket.length === 0 ? (
-                <div>
+                <div className="text-center">
                     <h2>Your Shopping Basket is empty!</h2>
                     <p>
                         You have no items in your basket.
@@ -26,6 +26,7 @@ function Checkout() {
                     <h2 className="checkout__title">Your Shopping Basket</h2>
                     { basket.map((item) => (
                         <CheckoutProduct
+                            key={item.id}
                             item={item.id}
                             title={item.title}
                             image={item.image}
