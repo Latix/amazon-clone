@@ -6,3 +6,8 @@
 {
     text-align: center;
 }
+
+.disable__addToBasketButton
+{
+  opacity: .8;
+}

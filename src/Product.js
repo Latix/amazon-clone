@@ -4,7 +4,7 @@ import './Product.css';
 import { useStateValue } from './StateProvider';
 
 function Product({...props}) {
-    const [, dispatch] = useStateValue();
+    const [state, dispatch] = useStateValue();
     const addToBasket = () => {
         dispatch({
             type: "ADD_TO_BASKET",
@@ -32,7 +32,16 @@ function Product({...props}) {
                 </div>
             </div>
             <img src={props.image} alt="" />
-            <button onClick={addToBasket}>Add to basket</button>
+            {
+                (state.basket.findIndex((basketItem) => basketItem.id === props.id) < 0) ?
+                (
+                    <button onClick={addToBasket}>Add to basket</button>
+                ) :
+                (
+                    <button disable className="disable__addToBasketButton">Added to basket</button>
+                )
+            }
+            
         </div>
     )
 }
