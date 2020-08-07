@@ -5,7 +5,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from './StateProvider';
-
 function Header() {
     const [ state ] = useStateValue();
     return (
