@@ -38,7 +38,7 @@ function Product({...props}) {
                     <button onClick={addToBasket}>Add to basket</button>
                 ) :
                 (
-                    <button disable className="disable__addToBasketButton">Added to basket</button>
+                    <button className="disable__addToBasketButton">Added to basket</button>
                 )
             }
             
