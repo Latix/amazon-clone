@@ -3,6 +3,14 @@ export const initialState = {
     user: null
 };
 
+export const getBasketTotal = (basket) => {
+    let amount = 0;
+    for(let i = 0;i < basket.length;i++) {
+        amount += Number(basket[i].price);
+    }
+    return amount;
+};
+
 function reducer(state, action) {
     console.log(action);
     switch (action.type) {

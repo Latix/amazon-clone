@@ -1,6 +1,7 @@
 import React from 'react'
 import './Checkout.css';
 import CheckoutProduct from './CheckoutProduct';
+import Subtotal from './Subtotal';
 import { useStateValue } from './StateProvider';
 
 function Checkout() {
@@ -8,32 +9,39 @@ function Checkout() {
 
     return (
         <div className="checkout">
-            <div className="image__container">
-                <img 
-                className="checkout__ad" 
-                src="https://financehippy.com/wp-content/uploads/2017/01/o-online-shopping-facebook.jpg" 
-                alt="" />
-            </div>
-            {basket.length === 0 ? (
-                <div className="text-center">
-                    <h2>Your Shopping Basket is empty!</h2>
-                    <p>
-                        You have no items in your basket.
-                    </p>
+            <div className="checkout__left">
+                <div className="image__container">
+                    <img 
+                    className="checkout__ad" 
+                    src="https://financehippy.com/wp-content/uploads/2017/01/o-online-shopping-facebook.jpg" 
+                    alt="" />
                 </div>
-            ) : (
-                <div>
-                    <h2 className="checkout__title">Your Shopping Basket</h2>
-                    { basket.map((item) => (
-                        <CheckoutProduct
-                            key={item.id}
-                            item={item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                            rating={item.rating}
-                        />
-                    ))}
+                {basket.length === 0 ? (
+                    <div className="text-center">
+                        <h2>Your Shopping Basket is empty!</h2>
+                        <p>
+                            You have no items in your basket.
+                        </p>
+                    </div>
+                ) : (
+                    <div>
+                        <h2 className="checkout__title">Your Shopping Basket</h2>
+                        { basket.map((item) => (
+                            <CheckoutProduct
+                                key={item.id}
+                                item={item.id}
+                                title={item.title}
+                                image={item.image}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+            {basket.length > 0 && (
+                <div className="checkout__right">
+                    <Subtotal />
                 </div>
             )}
         </div>
