@@ -28,13 +28,13 @@ function Home() {
                     rating={5}
                     image="https://cdn.shopify.com/s/files/1/0051/7692/products/aba-000004-pp-3_660x@2x.progressive.jpg?v=1482333028"
                 />
-                {/* <Product
+                <Product
                     id="1232123"
                     title="The Lean Startup"
                     price="2500"
                     rating={5}
                     image="https://blog.getenjoyhq.com/content/images/2019/03/inspired-how-to-create-tech-products-customer-love-cover.jpg"
-                /> */}
+                />
             </div>
         </div>
     )
