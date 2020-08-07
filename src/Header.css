@@ -14,6 +14,11 @@
     object-fit: contain;
 }
 
+.header__Mobilelogo
+{
+    display: none;
+}
+
 .header__search
 {
     display: flex;
@@ -76,4 +81,35 @@
 {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav
+    {
+        display: none;
+    }
+
+    .mobile__nav
+    {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .header__Mobilelogo
+    {
+        display: inline-block;
+        width: 35px;
+        margin: 5px 20px 5px 20px;
+        object-fit: contain;
+    }
+
+    .header__logo
+    {
+        display: none;
+    }
+
+    .mobile__navIcon
+    {
+        color: #fff;
+    }
 }

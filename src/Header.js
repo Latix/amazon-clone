@@ -3,6 +3,7 @@ import "./Header.css";
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import MenuIcon from '@material-ui/icons/Menu';
 
 function Header() {
     return (
@@ -11,6 +12,10 @@ function Header() {
                 <img 
                 className="header__logo" 
                 src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" 
+                alt="" />
+                <img 
+                className="header__Mobilelogo" 
+                src="http://pngimg.com/uploads/amazon/amazon_PNG23.png" 
                 alt="" />
             </Link>
             <div className="header__search">
@@ -42,6 +47,9 @@ function Header() {
                        <span className="header__optionLineTwo header__basketCount">0</span>
                     </div>
                 </Link>
+            </div>
+            <div className="mobile__nav">
+                <MenuIcon className="mobile__navIcon" />
             </div>
         </nav>
     )
