@@ -3,7 +3,7 @@ import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './Reducer';
-import { usePaystackPayment, PaystackButton, PaystackConsumer } from 'react-paystack';
+import { PaystackConsumer } from 'react-paystack';
 
 function Subtotal() {
     const [{ basket }] = useStateValue();
